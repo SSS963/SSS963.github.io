@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shaivi Sheth — AI/ML Engineer · Multi-Agent Systems &amp; Data</title>
+  <meta name="description" content="Shaivi Sheth — AI/ML-focused Computer Science undergraduate at NTU Singapore, shipping production-grade AI systems in regulated enterprise environments. LLMs, agentic architectures and data engineering." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='88' font-family='sans-serif' font-weight='700' fill='%2300e5ff'>S</text></svg>" />
+</head>
+<body>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <canvas id="bgCanvas" class="bg-canvas" aria-hidden="true"></canvas>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="progress" id="progress"></div>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a href="#home" class="logo">
+      <span class="logo__cube" aria-hidden="true">
+        <span class="logo__face logo__face--f">S</span>
+        <span class="logo__face logo__face--b">S</span>
+        <span class="logo__face logo__face--r"></span>
+        <span class="logo__face logo__face--l"></span>
+        <span class="logo__face logo__face--t"></span>
+        <span class="logo__face logo__face--bo"></span>
+      </span>
+      <span class="logo__text">Shaivi Sheth</span>
+    </a>
+    <nav class="nav__menu" id="navMenu">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#awards">Awards</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav__right">
+      <a href="assets/Shaivi_Sheth_Resume.pdf" class="neon-pill" download>Résumé</a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero__grid">
+        <div class="hero__left">
+          <p class="kicker"><span class="ping"></span> Live · AI &amp; Data Intern @ DBS Bank — Wealth Management Technology</p>
+          <h1 class="hero__name">
+            <span class="line">SHAIVI</span>
+            <span class="line line--out">SHETH</span>
+          </h1>
+          <p class="hero__role" id="heroRole">AI/ML Engineer</p>
+          <p class="hero__desc">
+            AI/ML-focused Computer Science undergraduate at <strong>NTU Singapore</strong> with a track
+            record of shipping <strong>production-grade AI systems in regulated, enterprise
+            environments</strong>. I work at the intersection of <strong>LLMs, agentic architectures
+            and data engineering</strong> — building systems that make complex data more intelligent
+            and accessible. Spin the sphere →
+          </p>
+          <div class="hero__cta">
+            <a href="#skills" class="neon-pill neon-pill--lg">Explore the stack
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#contact" class="ghost-pill ghost-pill--lg">Contact</a>
+          </div>
+          <div class="hero__socials">
+            <a href="https://github.com/SSS963" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5C5.4.5 0 5.9 0 12.6c0 5.3 3.4 9.8 8.2 11.4.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.8 18.3 5 18.3 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 24 12.6C24 5.9 18.6.5 12 .5z"/></svg></a>
+            <a href="https://www.linkedin.com/in/shaivi-sheth/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+            <a href="mailto:shaivi001@e.ntu.edu.sg" aria-label="Email"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+          </div>
+        </div>
+
+        <div class="hero__right">
+          <div class="sphere-stage" id="sphereStage">
+            <div class="sphere-rings" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="sphere" id="sphere" role="img" aria-label="Interactive 3D cloud of technical skills"></div>
+            <p class="sphere-hint" id="sphereHint">drag to rotate</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero__marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>MULTI-AGENT SYSTEMS</span><span>•</span><span>RAG</span><span>•</span><span>MCP</span><span>•</span><span>PYTHON</span><span>•</span><span>SEMANTIC SEARCH</span><span>•</span><span>DATA ENGINEERING</span><span>•</span><span>NEXT.JS</span><span>•</span><span>LLM PIPELINES</span><span>•</span>
+          <span>MULTI-AGENT SYSTEMS</span><span>•</span><span>RAG</span><span>•</span><span>MCP</span><span>•</span><span>PYTHON</span><span>•</span><span>SEMANTIC SEARCH</span><span>•</span><span>DATA ENGINEERING</span><span>•</span><span>NEXT.JS</span><span>•</span><span>LLM PIPELINES</span><span>•</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="block" id="about">
+      <div class="wrap">
+        <header class="block__head reveal">
+          <span class="tag-num">/ 01</span>
+          <h2>From software &amp; AI to<br />impact-driven technology</h2>
+        </header>
+
+        <div class="about">
+          <div class="about__main reveal">
+            <p>
+              I'm an <strong>AI/ML-focused Computer Science (Honours)</strong> undergraduate at
+              <strong>Nanyang Technological University</strong>, on the selective
+              <strong>Work Study Degree Program with DBS Bank</strong> — alternating between rigorous
+              CS coursework and real engineering inside one of Asia's leading banks.
+            </p>
+            <p>
+              My journey began with competitions and self-taught builds, grew through data analytics
+              and machine-learning projects, and has matured into <strong>production AI
+              engineering</strong>. I'm now on my <strong>third engagement with DBS</strong>, where I've
+              architected a <strong>multi-agent LLM pipeline</strong> documenting 800+ enterprise SQL
+              pipelines and built an <strong>AI knowledge assistant</strong> on Dify backed by a custom
+              MCP server and hybrid retrieval.
+            </p>
+            <p>
+              I care about systems that are not just clever, but <em>reliable, observable and
+              measurably useful</em>. I'm drawn to the intersection of <strong>AI, data and
+              finance</strong>, and I'm looking for roles building intelligent products end-to-end — at
+              tech companies, banks, consulting firms, AI startups and quantitative-finance teams.
+            </p>
+            <a href="#contact" class="link-arrow">Let's build something together
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+
+          <aside class="about__side">
+            <div class="facts reveal" data-tilt>
+              <div class="facts__in">
+                <h3>Quick facts</h3>
+                <ul>
+                  <li><span>📍 Location</span><strong>Singapore <small>(PR)</small></strong></li>
+                  <li><span>🎓 University</span><strong>NTU Singapore</strong></li>
+                  <li><span>💼 Programme</span><strong>Work Study Degree</strong></li>
+                  <li><span>🧭 Majors</span><strong>CS · Entrepreneurship</strong></li>
+                  <li><span>🤖 Specialisation</span><strong>AI &amp; Data Science</strong></li>
+                  <li><span>🗓️ Graduating</span><strong>Jul 2027</strong></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="edu reveal" data-tilt>
+              <div class="edu__in">
+                <h3>Education</h3>
+                <div class="edu__row">
+                  <div class="edu__logo">NTU</div>
+                  <div>
+                    <strong>Nanyang Technological University</strong>
+                    <p class="edu__deg">Bachelor of Computing (Honours), Computer Science</p>
+                    <p class="edu__meta">Second Major in Entrepreneurship · Double specialisation in AI and Data Science · Work Study Degree Program with DBS Bank</p>
+                    <p class="edu__date">Aug 2023 — Jul 2027 · Singapore</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="certs reveal">
+              <h3>Certifications</h3>
+              <div class="cert">
+                <span class="cert__ico" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" width="21" height="21"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                </span>
+                <div><strong>Google AI Professional Course</strong><small>Google Career Certificate</small></div>
+              </div>
+              <div class="cert">
+                <span class="cert__ico" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" width="21" height="21"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                </span>
+                <div><strong>Google Data Analytics Specialization</strong><small>Google Career Certificate</small></div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS — evidence-linked tiers -->
+    <section class="block" id="skills">
+      <div class="wrap">
+        <header class="block__head reveal">
+          <span class="tag-num">/ 02</span>
+          <h2>The Stack, in Depth</h2>
+          <p>
+            Instead of arbitrary percentages, every <strong>core</strong> skill below is linked to
+            <em>where I actually used it</em> — in production at DBS, in shipped projects, or in
+            coursework. Hover a panel; it responds in 3D.
+          </p>
+          <div class="legend">
+            <span class="legend__i"><i class="dot dot--core"></i>Core — used in production / shipped work</span>
+            <span class="legend__i"><i class="dot dot--work"></i>Working — hands-on, building with it</span>
+            <span class="legend__i"><i class="dot dot--exp"></i>Exploring — actively learning</span>
+          </div>
+        </header>
+
+        <div class="domains">
+          <!-- Featured: AI & ML -->
+          <article class="domain domain--wide reveal" data-tilt>
+            <div class="domain__in">
+              <div class="domain__glow"></div>
+              <header class="domain__head">
+                <span class="domain__ico">🧠</span>
+                <div><h3>AI &amp; Machine Learning</h3><p>LLM systems, agents and retrieval</p></div>
+              </header>
+              <ul class="core">
+                <li><span class="core__name"><i class="dot dot--core"></i>Multi-Agent Systems</span><span class="core__ev">Stock Research Assistant · DBS docs pipeline</span></li>
+                <li><span class="core__name"><i class="dot dot--core"></i>RAG &amp; Hybrid Search</span><span class="core__ev">DBS Dify knowledge base</span></li>
+                <li><span class="core__name"><i class="dot dot--core"></i>Embeddings &amp; Semantic Search</span><span class="core__ev">DBS Smart Search platform</span></li>
+                <li><span class="core__name"><i class="dot dot--core"></i>MCP (Model Context Protocol)</span><span class="core__ev">DBS AI knowledge assistant</span></li>
+                <li><span class="core__name"><i class="dot dot--core"></i>Prompt &amp; Context Engineering</span><span class="core__ev">DBS multi-agent LLM pipeline</span></li>
+                <li><span class="core__name"><i class="dot dot--core"></i>OpenAI &amp; Claude APIs</span><span class="core__ev">Budget Tracker · DBS agents</span></li>
+              </ul>
+              <div class="tier"><span class="tier__l"><i class="dot dot--work"></i>Working</span><div class="tier__c"><span>LangChain</span><span>LlamaIndex</span><span>Dify</span><span>RAGAS</span><span>ChromaDB</span><span>Vector DBs</span><span>sentence-transformers</span><span>scikit-learn</span><span>NLP</span><span>Hugging Face</span></div></div>
+              <div class="tier"><span class="tier__l"><i class="dot dot--exp"></i>Exploring</span><div class="tier__c"><span class="exp">PyTorch</span><span class="exp">TensorFlow</span></div></div>
+            </div>
+          </article>
+
+          <article class="domain reveal" data-tilt>
+            <div class="domain__in">
+              <div class="domain__glow"></div>
+              <header class="domain__head">
+                <span class="domain__ico">⌨️</span>
+                <div><h3>Languages</h3><p>What I build in</p></div>
+              </header>
+              <ul class="core">
+                <li><span class="core__name"><i class="dot dot--core"></i>Python</span><span class="core__ev">DBS automation &amp; agents</span></li>
+                <li><span class="core__name"><i class="dot dot--core"></i>SQL</span><span class="core__ev">800+ DBS enterprise pipelines</span></li>
+                <li><span class="core__name"><i class="dot dot--core"></i>TypeScript</span><span class="core__ev">Stock Agent · Budget Tracker</span></li>
+              </ul>
+              <div class="tier"><span class="tier__l"><i class="dot dot--work"></i>Working</span><div class="tier__c"><span>Java</span><span>JavaScript</span><span>C</span><span>HTML</span><span>CSS</span></div></div>
+              <div class="tier"><span class="tier__l"><i class="dot dot--exp"></i>Exploring</span><div class="tier__c"><span class="exp">C++</span><span class="exp">R</span></div></div>
+            </div>
+          </article>
+
+          <article class="domain reveal" data-tilt>
+            <div class="domain__in">
+              <div class="domain__glow"></div>
+              <header class="domain__head">
+                <span class="domain__ico">📊</span>
+                <div><h3>Data &amp; Analytics</h3><p>Pipelines to dashboards</p></div>
+              </header>
+              <ul class="core">
+                <li><span class="core__name"><i class="dot dot--core"></i>Power BI / Power Query</span><span class="core__ev">10+ dashboards @ SIA Engineering</span></li>
+                <li><span class="core__name"><i class="dot dot--core"></i>Pandas / NumPy</span><span class="core__ev">DBS evaluation · Spotify ML</span></li>
+                <li><span class="core__name"><i class="dot dot--core"></i>Data Pipelines</span><span class="core__ev">DBS Wealth Management data team</span></li>
+              </ul>
+              <div class="tier"><span class="tier__l"><i class="dot dot--work"></i>Working</span><div class="tier__c"><span>Matplotlib</span><span>Plotly</span><span>Recharts</span><span>Dashboarding</span></div></div>
+              <div class="tier"><span class="tier__l"><i class="dot dot--exp"></i>Exploring</span><div class="tier__c"><span class="exp">Spark</span></div></div>
+            </div>
+          </article>
+
+          <article class="domain reveal" data-tilt>
+            <div class="domain__in">
+              <div class="domain__glow"></div>
+              <header class="domain__head">
+                <span class="domain__ico">🌐</span>
+                <div><h3>Web &amp; Backend</h3><p>Full-stack delivery</p></div>
+              </header>
+              <ul class="core">
+                <li><span class="core__name"><i class="dot dot--core"></i>Next.js / React</span><span class="core__ev">Stock Agent · Budget Tracker</span></li>
+                <li><span class="core__name"><i class="dot dot--core"></i>REST APIs</span><span class="core__ev">DBS ingestion &amp; search APIs</span></li>
+                <li><span class="core__name"><i class="dot dot--core"></i>PostgreSQL / Supabase</span><span class="core__ev">Personal Budget Tracker</span></li>
+              </ul>
+              <div class="tier"><span class="tier__l"><i class="dot dot--work"></i>Working</span><div class="tier__c"><span>FastAPI</span><span>Django</span><span>Node.js</span><span>MongoDB</span><span>Prisma</span><span>Tailwind CSS</span></div></div>
+            </div>
+          </article>
+
+          <article class="domain reveal" data-tilt>
+            <div class="domain__in">
+              <div class="domain__glow"></div>
+              <header class="domain__head">
+                <span class="domain__ico">🛠️</span>
+                <div><h3>DevOps &amp; Tools</h3><p>Ship it and watch it</p></div>
+              </header>
+              <ul class="core">
+                <li><span class="core__name"><i class="dot dot--core"></i>Git</span><span class="core__ev">Every project &amp; internship</span></li>
+                <li><span class="core__name"><i class="dot dot--core"></i>Docker</span><span class="core__ev">DBS service work</span></li>
+                <li><span class="core__name"><i class="dot dot--core"></i>Vercel / CI-CD</span><span class="core__ev">GitHub Actions → Vercel deploys</span></li>
+              </ul>
+              <div class="tier"><span class="tier__l"><i class="dot dot--work"></i>Working</span><div class="tier__c"><span>Jenkins</span><span>Swagger</span><span>Grafana</span><span>Kibana</span><span>Jupyter</span><span>Figma</span><span>VS Code</span></div></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE — horizontal blocks -->
+    <section class="block" id="experience">
+      <div class="wrap">
+        <header class="block__head reveal">
+          <span class="tag-num">/ 03</span>
+          <h2>Experience</h2>
+          <p>Production AI engineering inside one of Asia's leading banks, and data analytics in aviation.</p>
+        </header>
+
+        <div class="xp">
+          <article class="xp-row xp-row--live reveal">
+            <aside class="xp-row__meta">
+              <div class="xp-row__logo">DBS</div>
+              <span class="xp-row__org">DBS Bank</span>
+              <span class="xp-row__date">May 2026 — Present</span>
+              <span class="live-badge"><span class="ping"></span>Current</span>
+              <span class="ws-badge">Work Study Degree Program</span>
+            </aside>
+            <div class="xp-row__body">
+              <h3>AI &amp; Data Intern</h3>
+              <p class="xp-row__team">Wealth Management Technology — Data Team</p>
+              <ul>
+                <li>Architected a <strong>multi-agent LLM pipeline</strong> using Claude Code to solve a critical documentation gap across <strong>800+ enterprise SQL pipelines</strong>, auto-generating structured, human-readable technical documentation at scale.</li>
+                <li>Built an <strong>AI knowledge assistant</strong> on Dify integrated with a <strong>custom MCP server</strong>, enabling natural-language querying of dataset metadata, job details, and upstream/downstream data lineage across enterprise pipelines.</li>
+                <li>Engineered a <strong>hybrid search knowledge base</strong> in Dify with custom chunking, dense embeddings and keyword retrieval — improving retrieval accuracy and reducing LLM hallucinations for domain-specific enterprise terminology.</li>
+              </ul>
+              <div class="chiprow"><span>Multi-Agent LLM</span><span>Claude Code</span><span>Dify</span><span>MCP</span><span>RAG</span><span>Hybrid Search</span><span>SQL</span></div>
+              <p class="xp-row__note">↺ Returning to DBS in <strong>December 2026</strong> for a focused 5-week engagement.</p>
+            </div>
+          </article>
+
+          <article class="xp-row reveal">
+            <aside class="xp-row__meta">
+              <div class="xp-row__logo">DBS</div>
+              <span class="xp-row__org">DBS Bank</span>
+              <span class="xp-row__date">May 2025 — Dec 2025</span>
+              <span class="ws-badge">Work Study Degree Program</span>
+            </aside>
+            <div class="xp-row__body">
+              <h3>AI &amp; Data Intern</h3>
+              <p class="xp-row__team">Customer Management &amp; Analytics — Smart Search Team</p>
+              <ul>
+                <li>Contributed to an enterprise <strong>Smart Search</strong> platform, working end-to-end from proof-of-concept model evaluation to production readiness for an <strong>embedding-based semantic search</strong> system.</li>
+                <li>Developed Python automation for <strong>large-scale evaluation and regression testing</strong>, refined ingestion and search APIs, and performed <strong>chaos testing</strong> and observability checks to improve system reliability.</li>
+                <li>Worked closely with engineers to validate <strong>ranking quality</strong>, debug distributed services, and support production configuration and deployment readiness in a <strong>regulated banking environment</strong>.</li>
+              </ul>
+              <div class="chiprow"><span>Semantic Search</span><span>Embeddings</span><span>Python</span><span>Chaos Testing</span><span>Observability</span><span>APIs</span></div>
+            </div>
+          </article>
+
+          <article class="xp-row reveal">
+            <aside class="xp-row__meta">
+              <div class="xp-row__logo xp-row__logo--sia">SIA</div>
+              <span class="xp-row__org">SIA Engineering</span>
+              <span class="xp-row__date">May 2024 — Aug 2024</span>
+            </aside>
+            <div class="xp-row__body">
+              <h3>Data Analyst Intern</h3>
+              <p class="xp-row__team">Non-Destructive Testing Department</p>
+              <ul>
+                <li>Enhanced data collection and extraction efficiency by <strong>60%</strong> with automation tools and a master database consolidating <strong>5 years</strong> of aircraft maintenance records via Power Query.</li>
+                <li>Designed <strong>10+ interactive Power BI dashboards</strong> visualising trends, maintenance request volumes and workforce distribution — improving data-driven decision-making by <strong>40%</strong>.</li>
+                <li>Performed operational analysis, forecasted demand and optimised workforce planning, driving a <strong>10% boost</strong> in departmental efficiency and resource utilisation.</li>
+              </ul>
+              <div class="chiprow"><span>Power BI</span><span>Power Query</span><span>Forecasting</span><span>Automation</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="block" id="projects">
+      <div class="wrap">
+        <header class="block__head reveal">
+          <span class="tag-num">/ 04</span>
+          <h2>Selected Builds</h2>
+          <p>Agentic AI systems, full-stack products and award-winning competition work.</p>
+        </header>
+
+        <div class="filters reveal" id="filters">
+          <button class="filter is-active" data-filter="all">All</button>
+          <button class="filter" data-filter="ai">AI &amp; Agents</button>
+          <button class="filter" data-filter="fullstack">Full-Stack</button>
+          <button class="filter" data-filter="ml">Data &amp; ML</button>
+        </div>
+
+        <div class="proj" id="projGrid">
+          <article class="proj-card proj-card--feature reveal" data-tilt data-cat="ai fullstack">
+            <div class="proj-card__inner">
+              <div class="proj-card__top"><span class="proj-card__ico">📈</span><span class="proj-card__yr">2026</span></div>
+              <h3>Multi-Agent Stock Research Assistant <span class="pill-flag">Flagship</span></h3>
+              <p>
+                A multi-agent AI system where a <strong>coordinator agent orchestrates 3 parallel
+                specialist sub-agents</strong> (fundamentals, technicals, sentiment), synthesising a
+                structured <strong>BUY/HOLD/SELL verdict</strong> with confidence scoring and JSON output.
+                Grounded in real market data via <strong>Alpha Vantage</strong> (P/E, EPS, ROE, moving
+                averages, debt/equity, analyst targets), with LLM inference on <strong>Groq
+                (LLaMA 3.3-70B)</strong> using parallel async calls to cut latency versus sequential runs.
+              </p>
+              <div class="chiprow"><span>TypeScript</span><span>Next.js</span><span>Multi-Agent</span><span>Groq / LLaMA 3.3</span><span>Alpha Vantage</span><span>Async Orchestration</span></div>
+            </div>
+          </article>
+
+          <article class="proj-card reveal" data-tilt data-cat="ai fullstack">
+            <div class="proj-card__inner">
+              <div class="proj-card__top"><span class="proj-card__ico">💸</span><span class="proj-card__yr">2026</span></div>
+              <h3>Personal Budget Tracker</h3>
+              <p>Full-stack finance tracker with <strong>GPT-4o-mini auto-categorisation</strong> and a personalised budget advisor analysing income, fixed commitments and 3-month history. Google &amp; GitHub OAuth, Vercel CI/CD, and a Recharts analytics dashboard.</p>
+              <div class="chiprow"><span>Next.js 14</span><span>TypeScript</span><span>PostgreSQL</span><span>Prisma</span><span>OpenAI</span><span>Supabase</span></div>
+            </div>
+          </article>
+
+          <article class="proj-card reveal" data-tilt data-cat="ai fullstack">
+            <div class="proj-card__inner">
+              <div class="proj-card__top"><span class="proj-card__ico">🎓</span><span class="proj-card__yr">2026</span></div>
+              <h3>CoursePilot — AI Academic Platform</h3>
+              <p>Deep Learning Week hackathon build unifying course tracking, deadlines and progress. Scalable <strong>FastAPI + MongoDB</strong> APIs plus learning analytics — a course journey map surfacing study behaviour and milestones.</p>
+              <div class="chiprow"><span>React</span><span>FastAPI</span><span>MongoDB</span><span>Analytics</span></div>
+            </div>
+          </article>
+
+          <article class="proj-card reveal" data-tilt data-cat="ml">
+            <div class="proj-card__inner">
+              <div class="proj-card__top"><span class="proj-card__ico">🎵</span><span class="proj-card__yr">2024</span></div>
+              <h3>Spotify Popularity ML <span class="pill-metric">98%</span></h3>
+              <p>Analysed <strong>50,000+</strong> tracks, reaching <strong>98% accuracy</strong> predicting popularity via K-means clustering, regression and classification on danceability, energy and valence — with 5+ interactive Plotly visualisations.</p>
+              <div class="chiprow"><span>Python</span><span>scikit-learn</span><span>K-means</span><span>Plotly</span><span>Pandas</span></div>
+            </div>
+          </article>
+
+          <article class="proj-card reveal" data-tilt data-cat="ml">
+            <div class="proj-card__inner">
+              <div class="proj-card__top"><span class="proj-card__ico">🌱</span><span class="proj-card__yr">2025</span></div>
+              <h3>OptiTravel — CO₂ &amp; Travel <span class="pill-award">2nd Runner-Up</span></h3>
+              <p>With <strong>PwC Singapore</strong>: an integrated CO₂-tracking and travel-management solution. Analysed corporate travel emissions to surface cost and carbon levers supporting PwC's <strong>50% CO₂ reduction by 2030</strong> goal.</p>
+              <div class="chiprow"><span>Sustainability</span><span>Data Analysis</span><span>Strategy</span></div>
+            </div>
+          </article>
+
+          <article class="proj-card reveal" data-tilt data-cat="fullstack">
+            <div class="proj-card__inner">
+              <div class="proj-card__top"><span class="proj-card__ico">🏥</span><span class="proj-card__yr">2024</span></div>
+              <h3>Hospital Management System <span class="pill-award">A−</span></h3>
+              <p>Built the Java <strong>Pharmacist module</strong> — prescription management, batch stock replenishment, automated low-stock detection and expiry removal — applying <strong>SOLID &amp; OOP</strong> for a modular, maintainable system.</p>
+              <div class="chiprow"><span>Java</span><span>OOP</span><span>SOLID</span><span>System Design</span></div>
+            </div>
+          </article>
+
+          <article class="proj-card reveal" data-tilt data-cat="ml">
+            <div class="proj-card__inner">
+              <div class="proj-card__top"><span class="proj-card__ico">🌾</span><span class="proj-card__yr">2021</span></div>
+              <h3>Crop Infection Classifier <span class="pill-metric">85%+</span></h3>
+              <p>Through <strong>InSpirit AI</strong> (taught by MIT &amp; Stanford graduates): a supervised-learning model classifying bacterial crop infections at <strong>85%+ accuracy</strong>, analysing <strong>10,000+</strong> crop-health data points for scalable yield prediction.</p>
+              <div class="chiprow"><span>Machine Learning</span><span>k-NN</span><span>Supervised Learning</span></div>
+            </div>
+          </article>
+        </div>
+        <p class="more reveal">More on <a href="https://github.com/SSS963" target="_blank" rel="noopener">GitHub ↗</a></p>
+      </div>
+    </section>
+
+    <!-- AWARDS -->
+    <section class="block" id="awards">
+      <div class="wrap">
+        <header class="block__head reveal">
+          <span class="tag-num">/ 05</span>
+          <h2>Recognition &amp; Leadership</h2>
+        </header>
+        <div class="awards">
+          <div class="award reveal" data-tilt><div class="award__in"><span class="award__m">🥇</span><div><strong>1st Nationally · 2nd in APAC</strong><p>JA Company of the Year — led a 14-member team building <em>GreenDomino</em> to 20% profit margin above projections, against 16 teams from 10 countries.</p></div></div></div>
+          <div class="award reveal" data-tilt><div class="award__in"><span class="award__m">🥈</span><div><strong>2nd Runner-Up</strong><p>NTU PEAK × PwC — <em>OptiTravel</em> CO₂ &amp; corporate-travel solution.</p></div></div></div>
+          <div class="award reveal" data-tilt><div class="award__in"><span class="award__m">⚡</span><div><strong>Logistics Director · NTU Women in Tech</strong><p>Led logistics for 5 large-scale events — hackathons &amp; datathons sponsored by <em>Jane Street, HP &amp; AWS</em> — 100% on-time delivery for 80+ participants each.</p></div></div></div>
+          <div class="award reveal" data-tilt><div class="award__in"><span class="award__m">🏅</span><div><strong>2nd Place + Best Solution</strong><p>Global Research Innovation Program (NUS × NTU) — microbial fuel-cell for rural electricity.</p></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="block block--contact" id="contact">
+      <div class="wrap">
+        <div class="contact reveal">
+          <span class="tag-num">/ 06</span>
+          <h2>Let's build something<br /><span class="grad">intelligent.</span></h2>
+          <p>Open to internships &amp; graduate roles in AI/ML, software, data engineering and quantitative finance.</p>
+          <div class="contact__cta">
+            <a href="mailto:shaivi001@e.ntu.edu.sg" class="neon-pill neon-pill--lg">Email me</a>
+            <a href="assets/Shaivi_Sheth_Resume.pdf" class="ghost-pill ghost-pill--lg" download>Download Résumé (PDF)</a>
+          </div>
+          <div class="contact__links">
+            <a href="mailto:shaivi001@e.ntu.edu.sg" data-tilt><div class="ctile"><b>✉️</b><span>Email</span><small>shaivi001@e.ntu.edu.sg</small></div></a>
+            <a href="https://www.linkedin.com/in/shaivi-sheth/" target="_blank" rel="noopener" data-tilt><div class="ctile"><b>in</b><span>LinkedIn</span><small>/in/shaivi-sheth</small></div></a>
+            <a href="https://github.com/SSS963" target="_blank" rel="noopener" data-tilt><div class="ctile"><b>⌥</b><span>GitHub</span><small>@SSS963</small></div></a>
+            <a href="tel:+6596430932" data-tilt><div class="ctile"><b>📞</b><span>Phone</span><small>+65 9643 0932</small></div></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>© <span id="yr"></span> Shaivi Sheth</span>
+    <span>Spatial edition · built dependency-free · Singapore 🇸🇬</span>
+    <a href="#home">Top ↑</a>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

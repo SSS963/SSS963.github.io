@@ -1,4 +1,4 @@
-# Shaivi Sheth — Portfolio (Spatial / 3D Edition)
+# Shaivi Sheth — Portfolio
 
 A bolder, interactive take on my portfolio — built **dependency-free** (no frameworks, no build step,
 no CDN libraries), so it runs anywhere and even offline.
@@ -19,7 +19,7 @@ no CDN libraries), so it runs anywhere and even offline.
 ## Structure
 ```
 portfolio-3d/
-├── index.html          # The 3D edition
+├── index.html          
 ├── css/styles.css
 ├── js/main.js          # Sphere, tilt, particles, typewriter, filters, nav
 └── assets/
